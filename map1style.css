@@ -1,0 +1,134 @@
+body { 
+	background: white none repeat scroll 0% 10%;
+	margin: 0;
+	font-family: Georgia, Arial;
+}
+
+	
+a:link { color: rgb(0,0,204);
+}
+	
+a:visited { color: rgb(0,0,204);
+}
+	
+a:active { color: rgb(51,51,255);
+}
+	
+.infowindow h2{
+	background:url('http://www.gomapping.tk/map1/leeds.png');
+	background-size: 45px;
+	background-position:right;
+	background-repeat:no-repeat;
+}     
+	
+.infowindow p{
+	color: rgb(64,64,64);
+	font-family: Georgia;
+	text-align: justify;
+}
+		
+	
+	
+/*------------------------------ TEMPLATE INFO ------------------------------*/
+div#templateInfo {
+	width: 100%;
+	height: 51px;
+	background: #361C06;
+	opacity: 0.9;
+	position: fixed;
+	z-index: 999;
+}
+
+div#templateInfo div {
+	width: 960px;
+	height: 51px;
+
+	line-height: 41px;
+	overflow: hidden;
+}
+
+div#templateInfo div img {
+	opacity: 0.6;
+}
+
+div#templateInfo div img:hover {
+	opacity: 1;
+}
+
+div#templateInfo div li{
+	display: inline;
+	margin: 5px 5px;	
+}
+
+#clearance {
+	height: 45px;
+}	
+
+/*------------------------------ HEADER ------------------------------*/
+#background {
+	background: url('http://www.gomapping.tk/map1/curtain.png')no-repeat center top;
+	background-size: 100%;
+	z-index: 999;
+}
+
+#header {
+	padding-top: 150px;
+	margin: 0 auto;
+}
+
+#header h1 {
+	font-weight: bold;
+	text-align: center;
+	color: rgb(0,0,204);
+	font-size: 30px;
+}
+
+#header div#panel {
+	text-align: center;
+}
+
+#header div#map_canvas {
+	margin-left: auto;
+	margin-right: auto;
+	border: thin solid black;
+	height: 400px;
+	width: 650px;
+}	
+	
+/*------------------------------ CONTENTS ------------------------------*/
+#contents {
+	padding-top: 50px;
+	width: 750px;
+	margin: 0 auto;
+}
+
+#contents h3 {
+	font-size: 25px;
+	color: rgb(0,0,204);
+}
+
+#contents p {
+	color: rgb(64,64,64);
+	font-size: 18px;
+	text-align: justify;
+}
+/**Facebook Comment**/
+#contents div#comments{
+	margin: 0 auto;
+	padding: 0 0 13px;
+}
+
+/*------------------------------ FOOTER ------------------------------*/
+#footer {
+	background: url('http://www.gomapping.tk/map1/footer.png') repeat-x center bottom;
+	padding: 18px 0 30px;
+}
+
+#footer p {
+	color: #61380B;
+	font-size: 13px;
+	line-height: 24px;
+	width: 960px;
+	margin: 0 auto;
+	text-align: center;
+}		
