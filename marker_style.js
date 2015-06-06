@@ -1,3 +1,8 @@
+//marker_style.js (Jan 16 2015)
+//(c)www.gomapping.tk    
+//All content copyright © 2015 GoMapping unless otherwise noted.
+//author: Ophelia Chan
+
 var map; // The map object
 var currentinfo = null;
 var myCentreLat =  53.799683;
