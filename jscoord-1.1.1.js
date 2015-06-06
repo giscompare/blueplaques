@@ -2,7 +2,7 @@
 // jscoord.js//// (c) 2005 Jonathan Stott//// Created on 21-Dec-2005//
 // 1.1.1 - 16 Jan 2006
 //  - Fixed radix bug in getOSRefFromSixFigureReference that would return
-//    the incorrect reference if either the northing or the easting started
+//    the incorrect reference if either the northing or the easting started 
 //    with a leading zero.
 // 1.1 - 23 Dec 2005
 //  - Added getOSRefFromSixFigureReference function.// 1.0 - 11 Aug 2005//  - Initial version created from PHPcoord v1.1//--------------------------------------------------------------------------
