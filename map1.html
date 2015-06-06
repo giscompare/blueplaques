@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+ 
+<html> 
+<head>
+	<meta charset="UTF-8">
+	<title>Google map API Example | Leeds Blue Plaques Map</title>
+	<meta name="description" content="Check out new Google Map API examples in gomapping.tk. Or simply have fun exploring Leeds Blue Plaques with interactive google maps. 1.Overlay multiple markers on click with custom infoWindow. 2. Auto close infoWindow when another marker is pressed. 3. Buttons control to show / hide markers based on category.">
+	<meta name="author" content="Ophelia Chan">
+	<link rel="stylesheet" media="all" href="map1style.css" type="text/css">
+	
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script> 
+	<script type="text/javascript" src="jscoord-1.1.1.js"></script> 
+	<script type="text/javascript" src="markerdata_map1.js"></script> 
+	<script type="text/javascript" src="marker_style.js"></script>
+
+	<meta property="og:title" content="Google map API example | Leeds Blue Plaque Map" />
+	<meta property="og:url" content="http://gomapping.tk/map1.html" />
+	<meta property="og:image" content="http://gomapping.tk/fb_img.jpg"/>
+	<meta property="og:site_name" content="Go Mapping! Google map API examples" />
+	
+	<!-- g+ / twitter-share-button -->
+	<script src="https://apis.google.com/js/platform.js" async defer>  {lang: 'en-GB'}</script>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+</head> 
+
+<body>
+	
+	<!-- Facebook like / share -->
+	<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+		
+	<div id="templateInfo">
+		<div>
+			<li><a href="http://www.gomapping.tk"><img src="http://www.gomapping.tk/map1/logo3.gif" title="home" height="38px" alt="gomapping.tk" style="margin-left:30px"></a></li>
+			<li><a href="http://www.gomapping.tk"><img src="http://www.gomapping.tk/map1/home.png" title="home" height="30px" alt="gomapping.tk" ></a></li>
+			<li><div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://gomapping.tk/map1.html"></div></li>
+			<li><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://gomapping.tk/map1.html">Tweet</a></li>
+			<li><script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script><script type="IN/Share" data-url="http://gomapping.tk/map1.html" data-counter="right"></script></li>
+			<li><a href="https://www.pinterest.com/pin/create/button/" data-pin-do="buttonBookmark"  data-pin-color="red"><img src="https://assets.pinterest.com/images/pidgets/pinit_fg_en_rect_red_20.png"/></a><script type="text/javascript" async defer src="https://assets.pinterest.com/js/pinit.js"></script></li>
+			<li><div class="g-plusone" data-size="medium"></div></li>
+			<li><div style="float:none;width:140px;height:41px" class="fb-like" data-href="http://gomapping.tk/" data-layout="button_count" data-action="like" data-width="90" data-show-faces="true" data-share="true"></div><div style="float:none;width:140px;height:41px" class="fb-send" data-href="http://gomapping.tk/map1.html"></div></li>
+		</div>
+	</div>  
+	
+	<div id="clearance"></div>
+	
+	<div id="background">
+	<div id="header">
+		
+		<h1><img src="http://www.gomapping.tk/map1/owl.jpg" width="50" height="50"> Leeds Blue Plaques Map </h1>
+		
+		<body onload="initialize()">
+		<div class="button" id="panel">
+			<input onclick="initialize();" type=button value="Show all">
+			<input onclick="display1();" type=button value="Unveiled in 1980s">
+			<input onclick="display2();" type=button value="Unveiled in 1990s">
+			<input onclick="display3();" type=button value="Unveiled in 2000s">
+		</div>
+		
+		<div class="gmap" id="map_canvas"></div>
+	</div>
+
+	
+	<div id="contents">
+	
+		<p><b>CLICK </b><img src="http://www.gomapping.tk/map1/blue.png"> to get detail infomation about the plaques.</p>
+		<p><b>CLICK </b><input type =button value="(buttons above)"> to show category of blue plaques unveiled in 1980s, 1990s and 2000s.</p><br>
+		<p><img src="http://www.gomapping.tk/map1/line.png" style="300px">&nbsp;</p>
+		
+		
+
+		<h3>Blue Plaques in Leeds</h3>
+		
+		<p>Blue Plaques are signs erected in public places, that commemorate historic events associated with that location,
+		and the lives of historic people who have had an association with the location. The earliest and most widely established
+		scheme iis run in London, an is now administered by English Heritage; separately administered schemes are run in many other 
+		parts of the country.</p>
+		
+		<p>&nbsp;</p>
+		
+		<p><a href="http://www.leedscivictrust.org.uk/?idno=1053" target="_blank">Leeds Civic Trust</a> set up its <font color="blue">
+		Blue Plaques Scheme</font> in 1987 to promote public awareness of the heritage of the city of Leeds. The first chosen blue plaque - 
+		Burley Bar, was unveiled in 1987. Right now, there are over 110 historical hertiages received this honour.</p>
+		
+		<p> Why not follow the map above and explore your own blue plaques trail in Leeds? <img src="http://www.gomapping.tk/map1/go.png" height="50"></p>
+		
+		<br>&nbsp;</br> <br>&nbsp;</br> 
+		
+		<h3>Data Source</h3>
+		
+		<p>A forthcoming book by John Stillwell and Rachael Unsworth (<i>Around Leeds, a guide to city centre</i>, Leeds University Press, 2008) 
+		discusses the development of Leeds as a city, including rapid recent growth.</p>
+		
+		<p><a href="http://www.leedscivictrust.org.uk/uploads/leeds/mainsite/downloads/PDFs/Heritage/Blue%20Plaques/All%20blue%20plaques%20ever%20erected.pdf" target="_blank">
+		Full listings of blue plaques</a> in pdf can be found in the website of Leeds Civil Trust.</p>
+		
+        <br>&nbsp;</br> <br>&nbsp;</br> 
+                
+        <div id="comments">
+            <div class="fb-comments" data-href="http://www.gomapping.tk/" data-numposts="5" data-colorscheme="light"></div>
+		</div>
+
+	</div>
+	
+	
+	
+	</div>
+	
+	<br>&nbsp;</br> 
+
+	<!-- Footer -->
+	<div id="footer">
+		<p>All content copyright © 2015 GoMapping unless otherwise noted. </p>
+	</div>
+
+
+</body> 
+</html> 
+
+			
